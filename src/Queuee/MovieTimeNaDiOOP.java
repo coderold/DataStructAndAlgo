@@ -1,10 +1,10 @@
-package Stackss;
+package Queuee;
 
 import java.util.Scanner;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class MovieTime {
+public class MovieTimeNaDiOOP {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
