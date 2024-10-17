@@ -1,15 +1,12 @@
 package Trees;
 
 import javax.swing.*;
-import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public class HtmlTree {
     public static void main(String[] args) {
-        // Create the root node
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("html");
 
-        // Create the child nodes
         DefaultMutableTreeNode head = new DefaultMutableTreeNode("head");
         DefaultMutableTreeNode body = new DefaultMutableTreeNode("body");
         
@@ -24,7 +21,6 @@ public class HtmlTree {
         DefaultMutableTreeNode h2 = new DefaultMutableTreeNode("h2");
         DefaultMutableTreeNode a = new DefaultMutableTreeNode("a");
 
-        // Build the tree structure
         root.add(head);
         root.add(body);
         
@@ -39,15 +35,12 @@ public class HtmlTree {
         body.add(h2);
         h2.add(a);
 
-        // Create the tree by passing the root node
         JTree tree = new JTree(root);
 
-        // Create and set up the window
-        JFrame frame = new JFrame("JTree Example");
+        JFrame frame = new JFrame("JTree ni Molina");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 300);
 
-        // Add the tree to a scroll pane and add it to the frame
         frame.add(new JScrollPane(tree));
         frame.setVisible(true);
     }
