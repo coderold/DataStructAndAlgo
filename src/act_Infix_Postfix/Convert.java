@@ -9,8 +9,8 @@ public class Convert {
 		Stack<Character> stack = new Stack<>();
 		Stack<Character> postfix = new Stack<>();
 		
-		//String eq = "5*(6+7)";
-		String eq = "(6/3+2)*(9-3)";
+		String eq = "5*(6+7)";
+		//String eq = "(6/3+2)*(9-3)";
 		char[] token = eq.toCharArray();
 		
 		for(int i = 0; i < eq.length(); i++) {
@@ -38,8 +38,8 @@ public class Convert {
 				stack.pop();
 			}
 		}
-			
-		System.out.println(postfix);
+		
+		System.out.println(eq + " converted to postfix is " + printPostfix(postfix));
 	}
 	
 	static boolean isOperator(char a){
@@ -106,6 +106,15 @@ public class Convert {
 			stack.pop();
 		}
 		stack.pop();	
+	}
+	
+	static String printPostfix(Stack<Character> postfix) {
+		StringBuilder str = new StringBuilder();
+		
+		for (int i = 0; i < postfix.size(); i++) {
+			str.append(postfix.get(i));
+		}
+		return str.toString();
 	}
 	
 }
